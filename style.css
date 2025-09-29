@@ -34,15 +34,14 @@ header h2 {
   margin-bottom: 15px;
 }
 
+/* Center the nav links */
 nav ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
+  margin: 0 auto 20px auto; /* center the ul */
+  display: flex;
+  justify-content: center; /* center links horizontally */
+  gap: 20px; /* spacing between links */
 }
 
 nav a {
