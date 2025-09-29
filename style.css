@@ -11,6 +11,9 @@ body {
   background: #ffefd5; /* light orange */
   color: #333;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding: 20px;
 }
 
@@ -54,9 +57,15 @@ nav a:hover {
 
 /* Main Content */
 main {
+  flex: 1; /* take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  text-align: center;
   max-width: 800px;
   margin: auto;
-  text-align: center;
+  padding: 20px 0;
 }
 
 p {
@@ -121,8 +130,9 @@ button:hover {
 
 /* Footer */
 footer {
-  text-align: center;
-  margin-top: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 20px; /* padding from right */
   font-size: 14px;
   color: #555;
 }
