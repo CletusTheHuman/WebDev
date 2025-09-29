@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Body - everything centered horizontally */
+/* Body - center everything horizontally */
 body {
   font-family: Arial, sans-serif;
   background: #ffefd5; /* light orange */
@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   align-items: center; /* center everything horizontally */
   padding: 20px;
-  text-align: center; /* default text centered */
+  text-align: center; /* center text by default */
 }
 
 /* Header */
@@ -35,15 +35,14 @@ header h2 {
   margin-bottom: 15px;
 }
 
-/* Nav links centered under header */
+/* Nav links centered reliably */
 nav {
-  width: 100%; /* full width container */
-  text-align: center; /* fallback centering */
+  text-align: center; /* center the inline-flex ul */
+  margin-bottom: 20px;
 }
 
 nav ul {
-  display: inline-flex; /* inline-flex keeps it centered */
-  justify-content: center; /* center links */
+  display: inline-flex; /* inline-flex keeps the list centered */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -51,7 +50,7 @@ nav ul {
 }
 
 nav li {
-  display: inline; /* list items inline */
+  display: inline; /* list items behave inline */
 }
 
 nav a {
