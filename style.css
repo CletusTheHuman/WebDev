@@ -5,21 +5,22 @@
   box-sizing: border-box;
 }
 
-/* Body */
+/* Body - everything centered horizontally */
 body {
   font-family: Arial, sans-serif;
   background: #ffefd5; /* light orange */
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  align-items: center; /* center horizontally */
   padding: 20px;
+  text-align: center; /* default text centered */
 }
 
 /* Header & Nav */
 header {
-  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -34,72 +35,58 @@ header h2 {
   margin-bottom: 15px;
 }
 
-/* Center the nav links */
+/* Nav links centered under header */
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto 20px auto; /* center the ul */
   display: flex;
-  justify-content: center; /* center links horizontally */
+  justify-content: center; /* center links */
   gap: 20px; /* spacing between links */
 }
 
 nav a {
   text-decoration: none;
-  color: #89CFF0; /* baby blue */
+  color: #89CFF0;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #4682B4; /* darker blue */
+  color: #4682B4;
 }
 
 /* Main Content */
 main {
-  flex: 1; /* take remaining space */
+  max-width: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center; /* horizontal centering */
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
+  align-items: center; /* horizontally center content */
+  justify-content: center;
   padding: 20px 0;
-}
-
-p {
-  font-size: 18px;
-  margin-bottom: 20px;
 }
 
 /* Lists */
 ul {
-  text-align: left;
-  margin: 20px auto;
-  max-width: 600px;
+  text-align: center; /* center list items */
+  margin: 20px 0;
 }
 
 /* Tables */
 table {
   border-collapse: collapse;
-  margin: 20px auto;
+  margin: 20px 0;
   width: 80%;
 }
 
-table, th, td {
-  border: 1px solid #333;
-}
-
 th, td {
+  border: 1px solid #333;
   padding: 10px;
   text-align: center;
 }
 
 /* Forms */
 form {
-  margin: 20px auto;
+  margin: 20px 0;
   max-width: 500px;
-  text-align: left;
 }
 
 label {
@@ -127,11 +114,11 @@ button:hover {
   background: #4682B4;
 }
 
-/* Footer */
+/* Footer fixed bottom-right */
 footer {
   position: fixed;
   bottom: 0;
-  right: 20px; /* padding from right */
+  right: 20px;
   font-size: 14px;
   color: #555;
 }
