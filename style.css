@@ -1,32 +1,36 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body - center everything horizontally */
 body {
   font-family: Arial, sans-serif;
-  background: #ffefd5; /* light orange */
+  background: linear-gradient(
+    to bottom right,
+    #a0d2eb,
+    #e5eaf5,
+    #d0bdf4,
+    #8458b3,
+    #a28089
+  );
   color: #333;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* center everything horizontally */
+  align-items: center;
   padding: 20px;
-  text-align: center; /* center text by default */
+  text-align: center;
 }
 
-/* Header */
 header {
   margin-bottom: 20px;
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #89CFF0; /* baby blue */
+  color: #89cff0;
 }
 
 header h2 {
@@ -35,57 +39,52 @@ header h2 {
   margin-bottom: 15px;
 }
 
-/* Nav links centered reliably */
 nav {
-  text-align: center; /* center the inline-flex ul */
+  text-align: center;
   margin-bottom: 20px;
 }
 
 nav ul {
-  display: inline-flex; /* inline-flex keeps the list centered */
+  display: inline-flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px; /* spacing between links */
+  gap: 20px;
 }
 
 nav li {
-  display: inline; /* list items behave inline */
+  display: inline;
 }
 
 nav a {
   text-decoration: none;
-  color: #89CFF0; /* baby blue */
+  color: #89cff0;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #4682B4; /* darker blue */
+  color: #4682b4;
 }
 
-/* Main Content */
 main {
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* horizontally center content */
+  align-items: center;
   justify-content: center;
   padding: 20px 0;
 }
 
-/* Paragraphs */
 p {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-/* Lists */
 ul {
-  text-align: center; /* center list items */
+  text-align: center;
   margin: 20px 0;
 }
 
-/* Tables */
 table {
   border-collapse: collapse;
   margin: 20px 0;
@@ -98,7 +97,6 @@ th, td {
   text-align: center;
 }
 
-/* Forms */
 form {
   margin: 20px 0;
   max-width: 500px;
@@ -118,7 +116,7 @@ input, textarea, button {
 }
 
 button {
-  background: #89CFF0;
+  background: #89cff0;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -126,10 +124,9 @@ button {
 }
 
 button:hover {
-  background: #4682B4;
+  background: #4682b4;
 }
 
-/* Footer fixed bottom-right */
 footer {
   position: fixed;
   bottom: 0;
