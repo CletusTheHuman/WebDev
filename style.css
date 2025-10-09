@@ -21,20 +21,17 @@ body {
     #e5eaf5,
     #d0bdf4,
     #8458b3,
-    #a28089
+    #a28089,
+    #a0d2eb
   );
-  background-size: 1000% 1000%; /* make gradient super large */
-  animation: gradientFlow 60s ease infinite; /* slow, continuous loop */
+  background-size: 600% 600%;
+  animation: gradientFlow 60s linear infinite;
 }
 
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
-  25% { background-position: 50% 50%; }
-  50% { background-position: 100% 50%; }
-  75% { background-position: 50% 50%; }
-  100% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
-
 
 body, h1, h2, p, a, li, label, button, footer {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
