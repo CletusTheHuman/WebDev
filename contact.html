@@ -3,41 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – Ben Archer</title>
-  <meta name="description" content="Contact page for Ben Archer – email, Spotify link, and external links.">
-  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #000;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+
+      background: linear-gradient(
+        270deg,
+        #a0d2eb,
+        #e5eaf5,
+        #d0bdf4,
+        #8458b3,
+        #a28089,
+        #a0d2eb
+      );
+      background-size: 600% 600%;
+      animation: gradientFlow 60s linear infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    body, h1, h2, p, a, li, label, button, footer {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      color: #000;
+    }
+
+    /* --- Universal Link Styles --- */
+    a,
+    a:link,
+    a:visited {
+      color: inherit; /* uses current text color */
+      text-decoration: none;
+      transition: color 160ms ease, filter 160ms ease;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      /* darker version of the existing color */
+      color: color-mix(in srgb, currentColor 78%, black 22%);
+      filter: brightness(0.85); /* fallback for older browsers */
+      text-decoration: underline;
+    }
+
+    /* --- Header --- */
+    header {
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #000;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+    /* --- Navigation --- */
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      display: inline-flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav a {
+      font-weight: bold;
+    }
+
+    /* --- Main Content --- */
+    main {
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+      width: 80%;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* --- Forms --- */
+    form {
+      margin: 20px 0;
+      max-width: 500px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #000;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #000;
+    }
+
+    /* --- Buttons --- */
+    button {
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    /* --- Contact Box --- */
+    #contact {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      position: fixed;
+      bottom: 0;
+      right: 20px;
+      font-size: 14px;
+      color: #000;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Contact Me</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>My Portfolio</h1>
+    <h2>Welcome to my website</h2>
   </header>
-  
-  <main>
-    <h2>Email Me</h2>
-    <p>Barcher802@gmail.com</p>
 
-    <h2>Check Out My Band</h2>
-    <p><a href="https://soundcloud.com/greatfutureband/sets/great-future-demos" target="_blank">Great Future</a></p>
-
-    <h2>External Links</h2>
+  <nav>
     <ul>
-      <li><a href="https://soundcloud.com/scottdavidarcher/sets/who-is-glen" target="_blank">My old band</a></li>
-      <li><a href="https://turnfollow.site/" target="_blank">My friend's video game company</a></li>
-      <li><a href="https://www.scottdavidarcher.net" target="_blank">My Brother's work</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+  </nav>
+
+  <main>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Here’s a look at some of my work.</p>
+      <!-- Add your portfolio items here -->
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Download my resume or view my experience here.</p>
+      <!-- You can add your resume link or content here -->
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="mailto:barcher802@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message" rows="5" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Email</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Ben Archer</p>
+    <p>&copy; 2025 My Portfolio</p>
   </footer>
 </body>
 </html>
