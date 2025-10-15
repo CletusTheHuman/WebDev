@@ -38,6 +38,25 @@ body, h1, h2, p, a, li, label, button, footer {
   color: #000;
 }
 
+/* --- Universal Link Styles --- */
+a,
+a:link,
+a:visited {
+  color: inherit; /* uses current text color */
+  text-decoration: none;
+  transition: color 160ms ease, filter 160ms ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+  /* darker version of the existing color */
+  color: color-mix(in srgb, currentColor 78%, black 22%);
+  filter: brightness(0.85); /* fallback for older browsers */
+  text-decoration: underline;
+}
+
+/* --- Header --- */
 header {
   margin-bottom: 20px;
 }
@@ -53,6 +72,7 @@ header h2 {
   margin-bottom: 15px;
 }
 
+/* --- Navigation --- */
 nav {
   text-align: center;
   margin-bottom: 20px;
@@ -71,15 +91,10 @@ nav li {
 }
 
 nav a {
-  text-decoration: none;
-  color: #000;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #000;
-}
-
+/* --- Main Content --- */
 main {
   max-width: 800px;
   display: flex;
@@ -111,6 +126,7 @@ th, td {
   text-align: center;
 }
 
+/* --- Forms --- */
 form {
   margin: 20px 0;
   max-width: 500px;
@@ -131,6 +147,7 @@ input, textarea, button {
   color: #000;
 }
 
+/* --- Buttons --- */
 button {
   background: #000;
   color: #fff;
@@ -143,6 +160,7 @@ button:hover {
   background: #333;
 }
 
+/* --- Footer --- */
 footer {
   position: fixed;
   bottom: 0;
