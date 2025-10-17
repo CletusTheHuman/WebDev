@@ -22,15 +22,24 @@
   </header>
   <main>
     <h2>Send Me a Message</h2>
-    <form>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+    <form id="contactForm">
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
 
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-      <button type="submit">Send</button>
-    </form>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents page reload
+    alert("✅ Thank you! Your message has been sent.");
+    form.reset(); // Clears the form fields
+  });
+</script>
 
     <h2>Check Out My Music</h2>
     <p><a href="https://spotify.com" target="_blank">🎵 Listen on Spotify</a></p>
