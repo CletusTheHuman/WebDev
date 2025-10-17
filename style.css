@@ -41,7 +41,23 @@ body, h1, h2, p, a, li, label, button, footer {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Header & Logo --- */
+a,
+a:link,
+a:visited {
+  color: #002244;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #000;
+  text-decoration: underline;
+  filter: brightness(0.9);
+}
+
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -61,7 +77,6 @@ header {
   transform: scale(1.05);
 }
 
-/* --- Navigation --- */
 nav {
   text-align: center;
   margin-bottom: 20px;
@@ -118,7 +133,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* --- Portfolio Gallery --- */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -161,7 +175,6 @@ figcaption {
   text-shadow: none;
 }
 
-/* --- About Page Table --- */
 table {
   border-collapse: collapse;
   margin: 20px auto;
@@ -191,7 +204,6 @@ tr:nth-child(even) {
   background-color: rgba(224, 224, 224, 0.5);
 }
 
-/* --- Resume Page Image --- */
 .resume-image-wrapper {
   display: flex;
   justify-content: center;
@@ -220,7 +232,58 @@ tr:nth-child(even) {
   }
 }
 
-/* --- Footer --- */
+form {
+  margin: 20px auto;
+  max-width: 600px;
+  width: 90%;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(132, 88, 179, 0.7);
+  transform: scale(1.01);
+}
+
+textarea {
+  min-height: 150px;
+}
+
+button {
+  background-color: #8458b3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a28089;
+  transform: scale(1.05);
+}
+
 footer {
   position: relative;
   margin-top: 40px;
