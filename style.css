@@ -41,6 +41,7 @@ body, h1, h2, p, a, li, label, button, footer {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* --- Header & Logo --- */
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -60,6 +61,7 @@ header {
   transform: scale(1.05);
 }
 
+/* --- Navigation --- */
 nav {
   text-align: center;
   margin-bottom: 20px;
@@ -116,6 +118,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* --- Portfolio Gallery --- */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -153,6 +156,7 @@ figcaption {
   text-shadow: none;
 }
 
+/* --- About Page Table --- */
 table {
   border-collapse: collapse;
   margin: 20px auto;
@@ -182,38 +186,36 @@ tr:nth-child(even) {
   background-color: rgba(224, 224, 224, 0.5);
 }
 
-.resume-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 60px auto;
+/* --- Resume Page Image --- */
+.resume-image-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px auto 60px auto;
 }
 
-.resume-frame {
-  width: 100%;
-  height: 90vh;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.resume-image {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-  .resume-frame {
-    height: 80vh;
-  }
+.resume-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 768px) {
-  .resume-wrapper {
-    max-width: 95%;
-  }
-  .resume-frame {
-    height: 70vh;
+  .resume-image {
+    width: 95%;
   }
 }
 
+/* --- Footer --- */
 footer {
   position: relative;
   margin-top: 40px;
