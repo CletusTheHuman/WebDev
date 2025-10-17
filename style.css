@@ -167,11 +167,6 @@ tr:nth-child(even) {
   background-color: rgba(224, 224, 224, 0.5);
 }
 
-tr:hover {
-  background-color: rgba(160, 210, 235, 0.6);
-  transition: background-color 0.3s ease;
-}
-
 footer {
   position: fixed;
   bottom: 0;
